@@ -266,6 +266,7 @@ async def scrape_user(username: str):
 
     user_data = {
         "username": user.get("username"),
+        "real_name": user.get("full_name"),
         "profile_pic": user.get("profile_pic_url_hd"),
         "followers": user.get("edge_followed_by", {}).get("count"),
         "following": user.get("edge_follow", {}).get("count"),
